@@ -22,6 +22,13 @@ const generateMarkdown = data => {
   # ${data.title}
 
   ## Table of Contents
+  - [Project description](#Description)
+  - [Installation](#Installation)
+  - [Usage](#Usage)
+  - [Contributing](#Contributing)
+  - [Tests](#Tests)
+  - [Questions](#Questions)
+  - [License](#License)
 
   ## Description 
   ${data.description}
