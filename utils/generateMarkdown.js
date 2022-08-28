@@ -1,8 +1,12 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
+const fs = require('fs').Promise;
+const inquirer = require('inquirer');
+const index = require('index.js');
+
+// Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 const renderLicenseBadge = (license) => {
   if (!license) {
-    renderLicenseBadge.license = [];
+    renderLicenseBadge.license = '';
   } else {
     const badges = {
       MIT:'[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)',
@@ -13,12 +17,10 @@ const renderLicenseBadge = (license) => {
   }
 } 
 
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
-// function renderLicenseLink(license) {}
+// Create a function that returns the license link
 const renderLicenseLink = (license) => {
   if (!license) {
-    renderLicenseLink.license = [];
+    renderLicenseLink.license = '';
   } else {
     const licenseLinks = {
       MIT: '[MIT](https://choosealicense.com/licenses/mit/)',
@@ -29,28 +31,23 @@ const renderLicenseLink = (license) => {
   }
 }
 
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
-// function renderLicenseSection(license) {}
+// Create a function that returns the license section of README
 const renderLicenseSection = (license) => {
   if (!license) {
-    renderLicenseSection = [];
+    renderLicenseSection = '';
   } else {
     return `Licensed under the ${this.renderLicenseLink(license)} license`
   }  
 }
 
 
-// TODO: Create a function to generate markdown for README
-// function generateMarkdown(data) {
-//   return `# ${data.title}
-
-// `;
-// }
-
+// Create a function to generate markdown for README
 const generateMarkdown = (data) => {
   return `
   # ${data.title}
+
+  ## ${renderLicenseSection(data.license)} ${$renderLicenseBadge(data.license)}
+  ### ${renderLicenseLink(data.license)}
 
   ## Table of Contents
   - [Project description](#Description)
@@ -85,5 +82,4 @@ const generateMarkdown = (data) => {
   `
 };
 
-
-module.exports = generateMarkdown.data;
+module.exports = generateMarkdown;

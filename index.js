@@ -1,6 +1,9 @@
+// packages required for this application
+const generateMarkdown = require('./utils/generateMarkdown');
 const inquirer = require('inquirer');
-const markDown = require('./utils/generateMarkdown');
+const fs = require('fs').Promise;
 
+// array of questions
 const questions = [
     {
       type: 'input',
@@ -79,38 +82,75 @@ const questions = [
           return false;
         }  
       }
+    },
+    {
+      type: 'list',
+      name: 'license',
+      message: 'Choose the license used for your project.',
+      choices: ['MIT', 'ISC', 'GPL v3.0'],
+      validate: licenseInput = () => {
+        if (!licenseInput) {
+          return false;
+        } else {
+          return true;
+        }  
+      }
+    },
+    {
+      type: 'input',
+      name: 'github',
+      message: 'What is your github username? (Required)',
+      validate: githubInput => {
+        if (githubInput) {
+            return true;
+        } else {
+          console.log('Please provide your username.');
+          return false;
+        }
+      }
+    },
+    {
+      type: 'input',
+      name: 'email',
+      message: 'What is your email address? (Required)',
+      validate: emailInput => {
+        if (emailInput) {
+            return true;
+        } else {
+          console.log('Please enter an email address.');
+          return false;
+        }
+      }
     }
-  ]
+  ];
 
+// function to write README file
+const writeToFile = fileContent => {
+  return new Promise((resolve, reject) => {
+    fs.writeFile('./generatedREADME.md', fileContent, err => {
+      if (err) {
+        reject(err);
+        return;
+      }
+      resolve ({
+        ok: true
+      });
+    });  
+  });
+};
 
-
-// TODO: Create a function to write README file
-function writeToFile(fileName, data) {
-  return inquirer.prompt(questions)
-    .then((data) => {
-      const mark = markDown.generateMarkdown(fileName, data)
-      return fileName, data
-    })
-    .catch((err)=>{
-      console.log(err)
-    })
+// function to initialize app
+function init() {
+  inquirer.prompt(questions)
+    .then(function(data) {
+      console.log(data);
+    var fileContent = generateMarkdown(data);
+    writeToFile(fileContent)  
+    });
 }
-writeToFile()
 
-// TODO: Create a function to initialize app
-function init() {}
-
-// Function call to initialize app
+// function call to initialize app
 init();
 
-// 
-const profileDataArgs = process.argv.slice(2);
-
-const printProfileData = profileDataArr => {
-  profileDataArr.forEach((profileItem) => {
-    console.log(profileItem)
-  });
-  };
-
-printProfileData(profileDataArgs);
-
+// exports
+module.exports = questions;
