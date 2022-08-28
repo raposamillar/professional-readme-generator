@@ -19,13 +19,33 @@ function renderLicenseSection(license) {}
 
 const generateMarkdown = data => {
   return `
-    README.md
-    # Title: ${data.title}
-    # Description: ${data.description}
-    # Installation: ${data.installation}
-    # Usage: ${data.usage}
-    # Contributing: ${data.contributing}
-    # Tests: ${data.tests}`;
-};
+  # ${data.title}
+
+  ## Table of Contents
+
+  ## Description 
+  ${data.description}
+  
+  ## Installation 
+  ${data.installation}
+  
+  ## Usage
+  ${data.usage}
+
+  ## Contributing 
+  ${data.contributing}
+
+  ## Tests
+  ${data.tests}
+
+  ## Questions 
+  ${data.email}
+  ${data.github}
+
+  ## License
+  ${data.license}
+  `
+}
+
 console.log(data.tests);
 module.exports = generateMarkdown;
