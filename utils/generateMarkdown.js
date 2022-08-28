@@ -52,7 +52,6 @@ const generateMarkdown = data => {
   ## License
   ${data.license}
   `
-}
+};
 
-console.log(data.tests);
 module.exports = generateMarkdown;

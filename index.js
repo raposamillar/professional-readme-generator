@@ -1,5 +1,5 @@
 const inquirer = require('inquirer');
-const MarkDown = require('./utils/generateMarkdown');
+const markDown = require('./utils/generateMarkdown');
 
 const questions = [
     {
@@ -85,7 +85,17 @@ const questions = [
 
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {
+  return inquirer.prompt(questions)
+    .then((data) => {
+      const mark = markDown.generateMarkdown(fileName, data)
+      return fileName, data
+    })
+    .catch((err)=>{
+      console.log(err)
+    })
+}
+writeToFile()
 
 // TODO: Create a function to initialize app
 function init() {}
@@ -103,3 +113,4 @@ const printProfileData = profileDataArr => {
   };
 
 printProfileData(profileDataArgs);
+
