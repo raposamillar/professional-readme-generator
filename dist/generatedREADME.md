@@ -1,9 +1,7 @@
 
   # Professional README Generator
 
-  ## License 
-  ### [![License: GPL v3.0](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0) 
-  ### This application is covered by the [GPL v3.0](https://choosealicense.com/licenses/gpl-3.0/) license.
+  ### [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 
 
   ## Table of Contents
   - [Description](#description)
@@ -12,6 +10,7 @@
   - [Contributing](#contributing)
   - [Tests](#tests)
   - [Questions](#questions)
+  - [License](#license)
 
   ## Description 
   The application creates a README.md based upon user input at the command line.
@@ -29,7 +28,13 @@
   Download files. From the command line, run node index and follow the prompts.
 
   ## Questions 
-  raposamillar </br>
-  lisa.raposamillar@gmail.com
+  GitHub: raposamillar  </br>
+  Email: lisa.raposamillar@gmail.com
+
+  ## License
+  ### This applicaton is covered by the [MIT](https://choosealicense.com/licenses/mit/) license.
+ 
+
+
 
   

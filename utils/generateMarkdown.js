@@ -18,11 +18,11 @@ function renderLicenseBadge(license) {
 function renderLicenseLink(license) {
   let licenseLink = '';
   if (license === 'MIT') {
-    licenseLink = 'This applicaton is covered by the [MIT](https://choosealicense.com/licenses/mit/) license.'
+    licenseLink = 'This applicaton is covered under the [MIT](https://choosealicense.com/licenses/mit/) license.'
   } else if (license === 'ISC') {
-    licenseLink = 'This application is covered by the [ISC](https://choosealicense.com/licenses/isc/ license.'
+    licenseLink = 'This application is covered under the [ISC](https://choosealicense.com/licenses/isc/ license.'
   } else if (license === 'GPL v3.0') {
-    licenseLink = 'This application is covered by the [GPL v3.0](https://choosealicense.com/licenses/gpl-3.0/) license.'
+    licenseLink = 'This application is covered under the [GPL v3.0](https://choosealicense.com/licenses/gpl-3.0/) license.'
   } else {
     licenseLink = ''
   }
@@ -45,9 +45,7 @@ function generateMarkdown(data) {
   return `
   # ${data.title}
 
-  ## ${renderLicenseSection(data.license)} 
   ### ${renderLicenseBadge(data.license)} 
-  ### ${renderLicenseLink(data.license)}
 
   ## Table of Contents
   - [Description](#description)
@@ -56,6 +54,7 @@ function generateMarkdown(data) {
   - [Contributing](#contributing)
   - [Tests](#tests)
   - [Questions](#questions)
+  - [License](#license)
 
   ## Description 
   ${data.description}
@@ -73,8 +72,14 @@ function generateMarkdown(data) {
   ${data.tests}
 
   ## Questions 
-  ${data.github} </br>
-  ${data.email}
+  GitHub: ${data.github}  </br>
+  Email: ${data.email}
+
+  ## ${renderLicenseSection(data.license)}
+  ### ${renderLicenseLink(data.license)}
+ 
+
+
 
   `;
 };
