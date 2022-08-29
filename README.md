@@ -15,10 +15,10 @@
   This back-end application is geared towards developers seeking to build a professional README file quickly.
   
   ## Installation 
-  1. Install Node.js in the root directory of your local machine. LTS version recommended. (https://nodejs.org) 2. Download or clone the files in this repo. 3. Install the npm inquirer package, version 8.2.4. At the command line, run: npm i inquirer@8.2.4 
+  </br>1. Install Node.js in the root directory of your local machine. LTS version recommended. (https://nodejs.org)</br>2. Download or clone the files in this repo.</br>3. Install the npm inquirer package, version 8.2.4. At the command line run: npm i inquirer@8.2.4 
   
   ## Usage
-  node index invokes the application from the command line
+  To invoke the application from the command line run: node index 
 
   ## Contributing 
   Developers who have ideas for improvement may fork this project and submit pull requests for review.
