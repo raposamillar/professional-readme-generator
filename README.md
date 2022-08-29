@@ -17,10 +17,10 @@
   <a href="https://github.com/raposamillar/portfolio-generator">Sample README File</a>
   
   ## Installation 
-  </br>1. Install Node.js in the root directory of your local machine. LTS version recommended. (https://nodejs.org)</br>2. Download or clone the files in this repo.</br>3. Install the npm inquirer package, version 8.2.4. At the command line run: npm i inquirer@8.2.4 
+  </br>1. Install Node.js in the root directory of your local machine. LTS version recommended. (https://nodejs.org)</br>2. Download or clone the files in this repo.</br>3. Install npm i inquirer@8.2.4 
   
   ## Usage
-  To invoke the application from the command line run: node index 
+  Invoke the application from the command line with: node index 
 
   ## Contributing 
   Developers who have ideas for improvement may fork this project and submit pull requests for review.
