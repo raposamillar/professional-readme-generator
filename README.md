@@ -13,7 +13,7 @@
 
   ## Description 
   This back-end application is geared towards developers seeking to build a professional README file quickly.</br>
-  <a href="https://drive.google.com/file/d/19NYM9I8DPyk9Kw6ghtRfMJa5lmRrjQPk/view?usp=sharing">Walkthrough Video Link</a></br>
+  <a href="https://drive.google.com/file/d/1L0tXZcY0VgQVan58HuvqVKbDvOCLYS3H/view?usp=sharing">Walkthrough Video Link</a></br>
   <a href="https://github.com/raposamillar/portfolio-generator">Sample README File</a>
   
   ## Installation 
