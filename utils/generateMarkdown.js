@@ -7,7 +7,7 @@ function renderLicenseBadge(license) {
   } else if (license === 'ISC') {
     badge = '[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)'
   } else if (license === 'GPL v3.0') {
-    badge = '[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)'
+    badge = '[![License: GPL v3.0](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)'
   } else {
     badge = ''
   }
@@ -18,11 +18,11 @@ function renderLicenseBadge(license) {
 function renderLicenseLink(license) {
   let licenseLink = '';
   if (license === 'MIT') {
-    licenseLink = '[MIT](https://choosealicense.com/licenses/mit/)'
+    licenseLink = 'This applicaton is covered by the [MIT](https://choosealicense.com/licenses/mit/) license.'
   } else if (license === 'ISC') {
-    licenseLink = '[ISC](https://choosealicense.com/licenses/isc/)'
+    licenseLink = 'This application is covered by the [ISC](https://choosealicense.com/licenses/isc/ license.'
   } else if (license === 'GPL v3.0') {
-    licenseLink = '[GPLv3](https://choosealicense.com/licenses/gpl-3.0/)'
+    licenseLink = 'This application is covered by the [GPL v3.0](https://choosealicense.com/licenses/gpl-3.0/) license.'
   } else {
     licenseLink = ''
   }
@@ -32,10 +32,10 @@ function renderLicenseLink(license) {
 // function that returns the license section of README
 function renderLicenseSection(license) {
   if(license === 'None') {
-    licenseSenction = ''
+    licenseSection = ''
   } else {
     licenseSection =
-    `License: $(license)`
+    `License`
   }  
   return licenseSection;
 }
@@ -45,16 +45,17 @@ function generateMarkdown(data) {
   return `
   # ${data.title}
 
-  ## ${renderLicenseSection(data.license)} ${renderLicenseBadge(data.license)}
+  ## ${renderLicenseSection(data.license)} 
+  ### ${renderLicenseBadge(data.license)} 
   ### ${renderLicenseLink(data.license)}
 
   ## Table of Contents
-  - [Project description](#Description)
-  - [Installation](#Installation)
-  - [Usage](#Usage)
-  - [Contributing](#Contributing)
-  - [Tests](#Tests)
-  - [Questions](#Questions)
+  - [Description](#description)
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [Contributing](#contributing)
+  - [Tests](#tests)
+  - [Questions](#questions)
 
   ## Description 
   ${data.description}
@@ -72,8 +73,8 @@ function generateMarkdown(data) {
   ${data.tests}
 
   ## Questions 
+  ${data.github} </br>
   ${data.email}
-  ${data.github}
 
   `;
 };
