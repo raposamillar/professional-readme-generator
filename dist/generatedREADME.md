@@ -13,19 +13,19 @@
   - [License](#license)
 
   ## Description 
-  The application creates a README.md based upon user input at the command line.
+  This back-end application is geared towards developers seeking to build a professional README file quickly.
   
   ## Installation 
-  The user must have node installed on their local machine. It also requires the inquirer package, version 8.2.4.
+  1. Install Node.js in the root directory of your local machine. LTS version recommended. (https://nodejs.org) 2. Download or clone the files in this repo. 3. Install the npm inquirer package, version 8.2.4. At the command line, run: npm i inquirer@8.2.4 
   
   ## Usage
-  The README generator can be used with any professional application featured on GitHub.
+  node index invokes the application from the command line
 
   ## Contributing 
-  Other developers can contribute by searching the list of issues on GitHub specifically designated for this project.
+  Developers who have ideas for improvement may fork this project and submit pull requests for review.
 
   ## Tests
-  Download files. From the command line, run node index and follow the prompts.
+  n/a
 
   ## Questions 
   Please feel free to reach out via either of the links below if you have additional questions about this application.</br>
