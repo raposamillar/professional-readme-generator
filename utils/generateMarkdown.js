@@ -72,15 +72,12 @@ function generateMarkdown(data) {
   ${data.tests}
 
   ## Questions 
-  GitHub: ${data.github}  </br>
+  Please feel free to reach out via either of the links below if you have additional questions about this application.</br>
+  GitHub: <a href="https://github.com/${data.github}/">${data.github}</a></br>
   Email: ${data.email}
 
   ## ${renderLicenseSection(data.license)}
   ### ${renderLicenseLink(data.license)}
- 
-
-
-
   `;
 };
 

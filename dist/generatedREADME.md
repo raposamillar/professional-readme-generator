@@ -1,7 +1,7 @@
 
   # Professional README Generator
 
-  ### [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 
+  ### [![License: GPL v3.0](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0) 
 
   ## Table of Contents
   - [Description](#description)
@@ -28,13 +28,10 @@
   Download files. From the command line, run node index and follow the prompts.
 
   ## Questions 
-  GitHub: raposamillar  </br>
+  Please feel free to reach out via either of the links below if you have additional questions about this application.</br>
+  GitHub: <a href="https://github.com/raposamillar/">raposamillar</a></br>
   Email: lisa.raposamillar@gmail.com
 
   ## License
-  ### This applicaton is covered by the [MIT](https://choosealicense.com/licenses/mit/) license.
- 
-
-
-
+  ### This application is covered under the [GPL v3.0](https://choosealicense.com/licenses/gpl-3.0/) license.
   
