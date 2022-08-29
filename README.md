@@ -12,7 +12,9 @@
   - [License](#license)
 
   ## Description 
-  This back-end application is geared towards developers seeking to build a professional README file quickly.
+  This back-end application is geared towards developers seeking to build a professional README file quickly.</br>
+  <a href="https://drive.google.com/file/d/19NYM9I8DPyk9Kw6ghtRfMJa5lmRrjQPk/view?usp=sharing">Walkthrough Video Link</a></br>
+  <a href="https://github.com/raposamillar/portfolio-generator">Sample README File</a>
   
   ## Installation 
   </br>1. Install Node.js in the root directory of your local machine. LTS version recommended. (https://nodejs.org)</br>2. Download or clone the files in this repo.</br>3. Install the npm inquirer package, version 8.2.4. At the command line run: npm i inquirer@8.2.4 

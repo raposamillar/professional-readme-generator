@@ -16,13 +16,13 @@
   This back-end application using Node.js is geared towards developers seeking to build a professional portfolio page quickly.
   
   ## Installation 
-  </br>Install Node.js to your local machine.</br>Download or clone this repo.</br>Install npm i inquirer@8.2.4
+  npm i inquirer@8.2.4
   
   ## Usage
-  Invoke the application by running: node index
+  node index
 
   ## Contributing 
-  Developers who have ideas for improvement may fork this project and submit pull requests for review.
+  Developers may fork this project and submit pull requests.
 
   ## Tests
   n/a
