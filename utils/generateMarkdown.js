@@ -1,52 +1,90 @@
-const fs = require('fs').Promise;
-const inquirer = require('inquirer');
-const index = require('index.js');
+// const fs = require('fs');
+// const inquirer = require('inquirer');
+// const index = require('index.js');
 
 // Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
-const renderLicenseBadge = (license) => {
-  if (!license) {
-    renderLicenseBadge.license = '';
+function renderLicenseBadge(license) {
+  let badge = '';
+  if (license === 'MIT') {
+    badge = '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)'
+  } else if (license === 'ISC') {
+    badge = '[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)'
+  } else if (license === 'GPL v3.0') {
+    badge = '[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)'
   } else {
-    const badges = {
-      MIT:'[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)',
-      ISC:'[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)',
-      GPLv3:'[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)'
-    }
-    return badges[license]
+    badge = ''
   }
-} 
+  return badge;
+}
+
+// const renderLicenseBadge = (license) => {
+//   if (license === '') {
+//     renderLicenseBadge.license = '';
+//   } else {
+//     const badges = {
+//       MIT:'[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)',
+//       ISC:'[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)',
+//       GPLv3:'[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)'
+//     }
+//     return badges[license]
+//   }
+// } 
 
 // Create a function that returns the license link
-const renderLicenseLink = (license) => {
-  if (!license) {
-    renderLicenseLink.license = '';
+function renderLicenseLink(license) {
+  let licenseLink = '';
+  if (license === 'MIT') {
+    licenseLink = '[MIT](https://choosealicense.com/licenses/mit/)'
+  } else if (license === 'ISC') {
+    licenseLink = '[ISC](https://choosealicense.com/licenses/isc/)'
+  } else if (license === 'GPL v3.0') {
+    licenseLink = '[GPLv3](https://choosealicense.com/licenses/gpl-3.0/)'
   } else {
-    const licenseLinks = {
-      MIT: '[MIT](https://choosealicense.com/licenses/mit/)',
-      ISC: '[ISC](https://choosealicense.com/licenses/isc/)',
-      GPLv3: '[GPLv3](https://choosealicense.com/licenses/gpl-3.0/)'
-    }
-    return licenseLinks[license]
+    licenseLink = ''
   }
-}
+  return licenseLink;
+};
+
+// const renderLicenseLink = (license) => {
+//   if (license === '') {
+//     renderLicenseLink.license = '';
+//   } else {
+//     const licenseLinks = {
+//       MIT: '[MIT](https://choosealicense.com/licenses/mit/)',
+//       ISC: '[ISC](https://choosealicense.com/licenses/isc/)',
+//       GPLv3: '[GPLv3](https://choosealicense.com/licenses/gpl-3.0/)'
+//     }
+//     return licenseLinks[license]
+//   }
+// }
 
 // Create a function that returns the license section of README
-const renderLicenseSection = (license) => {
-  if (!license) {
-    renderLicenseSection = '';
+function renderLicenseSection(license) {
+  if(license === 'None') {
+    licenseSenction = ''
   } else {
-    return `Licensed under the ${this.renderLicenseLink(license)} license`
+    licenseSection =
+    `License: $(license)`
   }  
+  return licenseSection;
 }
+
+// const renderLicenseSection = (license) => {
+//   if (license === '') {
+//     renderLicenseSection = '';
+//   } else {
+//     return `Licensed under the ${renderLicenseSection(license)} license`
+//   }  
+// }
 
 
 // Create a function to generate markdown for README
-const generateMarkdown = (data) => {
+function generateMarkdown(data) {
   return `
   # ${data.title}
 
-  ## ${renderLicenseSection(data.license)} ${$renderLicenseBadge(data.license)}
+  ## ${renderLicenseSection(data.license)} ${renderLicenseBadge(data.license)}
   ### ${renderLicenseLink(data.license)}
 
   ## Table of Contents
@@ -56,7 +94,6 @@ const generateMarkdown = (data) => {
   - [Contributing](#Contributing)
   - [Tests](#Tests)
   - [Questions](#Questions)
-  - [License](#License)
 
   ## Description 
   ${data.description}
@@ -77,9 +114,8 @@ const generateMarkdown = (data) => {
   ${data.email}
   ${data.github}
 
-  ## License
-  ${this.renderLicenseLink(data.license)}
-  `
+  `;
 };
 
+// exports
 module.exports = generateMarkdown;
