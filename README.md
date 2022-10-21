@@ -36,4 +36,6 @@
 
   ## License
   ### This application is covered under the [GPL v3.0](https://choosealicense.com/licenses/gpl-3.0/) license.
+
+  <img src="./public/images/screenshot-1.jpg" width="500" />
   
